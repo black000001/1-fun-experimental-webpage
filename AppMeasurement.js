@@ -1,6 +1,6 @@
-var s = s_gi("lscsrhythmdExperimentalWebPage");
+var s = s_gi("lscstestingfornishita");
 
-s.trackingServer = "cardgage.sc.omtrdc.net" 
+s.trackingServer = "cardgage.sc.omtrdc.net"  /*helps in generating cookie; trackingServerSecure = to identify user data send to adobe in encrypted form*/
 s.usePlugins=true
 s.trackingServerSecure="cardgage.sc.omtrdc.net"
 
