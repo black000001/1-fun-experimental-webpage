@@ -31,6 +31,19 @@
 	<h1 >WELCOME TO THE WORLD OF FUN</h1>
 	<h1>Are you in a search of place where you can find some fun?</h1>
 	<h1>Then you have landed the right place. Enjoy!!</h1>
+	<a href="#" id="downloadLink" download="myFile.txt">Download Text File</a>
+
+    <script>
+        // JavaScript code for handling the download
+        const downloadLink = document.getElementById('downloadLink');
+        const fileContent = 'This is the content of your text file.';
+
+        downloadLink.addEventListener('click', function () {
+            const blob = new Blob([fileContent], { type: 'text/plain' });
+            downloadLink.href = URL.createObjectURL(blob);
+        });
+    </script>
+	
 	</div>
 </head>
 
