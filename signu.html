@@ -55,6 +55,12 @@ window.digitalData.page.pageInfo.referringURL = document.referrer;
 window.digitalData.page.pageInfo.sysEnv = navigator.userAgent;
 <script src="https://assets.adobedtm.com/e9875dd51dbe/5ab81f236109/launch-224b3d2d3702-development.min.js" async></script>
 <script>
+        function generateRandomUserId() {
+            // Generate a random user ID (you can customize this logic based on your requirements)
+            var randomUserId = "User" + Math.floor(Math.random() * 1000000);
+            return randomUserId;
+        }
+
         function validateLogin() {
             // Get the values from the input fields
             var username = document.getElementById("username").value;
@@ -62,6 +68,12 @@ window.digitalData.page.pageInfo.sysEnv = navigator.userAgent;
 
             // Check if the username and password are correct (You should implement your authentication logic here)
             if (username === "test123" && password === "test123") {
+                // Generate a random user ID
+                var randomUserId = generateRandomUserId();
+
+                // Display the random user ID (You can customize this part based on your needs)
+                alert("Login successful! Your User ID is: " + randomUserId);
+
                 // Redirect to the new page
                 window.location.href = "newPage.html";
             } else {
@@ -72,6 +84,7 @@ window.digitalData.page.pageInfo.sysEnv = navigator.userAgent;
     </script>
 </head>
 <body>
+    <h1>Login Page</h1>
     <form>
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
