@@ -5,57 +5,36 @@
 
 	<title>signup page</title>
 <script src="https://assets.adobedtm.com/e9875dd51dbe/5ab81f236109/launch-224b3d2d3702-development.min.js" async></script>
+<script>
+        function validateLogin() {
+            // Get the values from the input fields
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Check if the username and password are correct (You should implement your authentication logic here)
+            if (username === "test123" && password === "test123") {
+                // Redirect to the new page
+                window.location.href = "newPage.html";
+            } else {
+                // Display an error message (You can customize this part based on your needs)
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
 </head>
 <body>
-<script language="JavaScript" type="text/javascript"><!--
-/* You may give each page an identifying name, server, and channel on
-the next lines. */
-s.pageName="Nishita Badola"
-s.server=""
-s.channel=""
-s.pageType=""
-s.prop1="living"
-s.prop2="working"
-s.prop3=""
-s.prop4=""
-s.prop5=""
-s.hier1=""
-/* Conversion Variables */
-s.campaign=""
-s.state="Delhi"
-s.zip="110067"
-s.events = "event7, purchase";
-s.products="Cat 1; Prod 1;2;130;event7=1234:GHJ123,Cat 1; Prod 1;1;120;event7=5678:GHJ123"
-s.purchaseID="1007"
-s.transactionID=""
-s.eVar1="What is this"
-s.eVar2="hygiene"
-s.eVar3="brush their teeth"
-s.eVar4="shower"
-s.eVar5="Dental hygiene"
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
 
-s.eVar7=["Prabhjeet","Bhatia"]
-var s_code=s.t();if(s_code)document.write(s_code)//--></script>
-<form id="frm">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputFile">File input</label>
-    <input type="file" id="exampleInputFile">
-    <p class="help-block">Example block-level help text here.</p>
-  </div>
-  <div class="checkbox">
-    <label>
-      <input type="checkbox"> Check me out
-    </label>
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <br>
+
+        <button type="button" onclick="validateLogin()">Login</button>
+    </form>
 </body>
 </html>
